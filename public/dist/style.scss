@@ -1,0 +1,9 @@
+li {
+  list-style-type:none;
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  flex-flow: flex-end;
+}
