@@ -1,9 +1,11 @@
 'use strict';
 const express = require('express');
-const { layout } = require('../handlers');
+const {
+  storeMiddleware,
+  homePage } = require('../controllers/storeController');
 
 const router = express.Router();
 
-router.get('/', layout);
+router.get('/', storeMiddleware, homePage);
 
 module.exports = router;
