@@ -1,11 +1,19 @@
 'use strict';
 const express = require('express');
 const {
-  storeMiddleware,
-  homePage } = require('../controllers/storeController');
+  middlewareLogger,
+  homePage,
+  addItem,
+  createItem } = require('../controllers/itemController');
 
 const router = express.Router();
 
-router.get('/', storeMiddleware, homePage);
+router.use(middlewareLogger);
+
+router.get('/', homePage);
+
+router.get('/add', addItem);
+
+router.post('/add', createItem);
 
 module.exports = router;
