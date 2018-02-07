@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/d-kang/marketplace#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "moment": "^2.20.1",
     "pug": "^2.0.0-rc.4"
