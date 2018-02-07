@@ -1,8 +1,10 @@
 'use strict';
 const mongoose = require('mongoose');
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({ path: 'variables.env' });
+}
 
-require('dotenv').config({ path: 'variables.env'});
 mongoose.connect(process.env.DATABASE);
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error', (error) => {
