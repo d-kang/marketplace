@@ -1,1 +1,32 @@
-h1 #{h.siteName}
+doctype html
+html
+  head
+    title= `${title} | ${u.siteName}`
+    link(rel='stylesheet' href='./dist/style.css')
+    meta(name='viewport' content='width=device-width initial-scale=1')
+  body
+    block header
+    header.top
+      nav.nav
+        div.nav__container
+          li.nav__item
+            a(href="/")
+          each item in u.menu
+            li.nav__left
+              a(href=item.slug)
+                span #{item.title}
+          div.nav__right
+            div
+              input(type="text" placeholder="search..." name="search")
+          div.nav__right
+            if user
+              li: a(href="/hearts")
+              li: a(href="/logout")
+                span Logout
+              li: a(href="/account")
+            else
+              li: a(href="/register") Register
+              lit: a(href="/login") Log In
+    div
+      block content
+
