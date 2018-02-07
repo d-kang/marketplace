@@ -7,6 +7,7 @@
     "start": "node server",
     "watch": "nodemon server",
     "pretest": "eslint --ignore-path .gitignore .",
+    "sass": "sass --watch ./public/dist/style.scss:./public/dist/style.css ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,16 +16,19 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/d-kang/marketplace/issues"
   },
   "homepage": "https://github.com/d-kang/marketplace#readme",
   "dependencies": {
     "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "moment": "^2.20.1",
-    "pug": "^2.0.0-rc.4"
+    "mongoose": "^5.0.3",
+    "pug": "^2.0.0-rc.4",
+    "slugs": "^0.1.3"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
